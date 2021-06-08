@@ -1,0 +1,165 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-26T16:00:49.686Z",
+        "before": [
+          {
+            "result": {
+              "duration": 697976900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Validate a new user is created with basic API call",
+        "description": "",
+        "id": "create-new-employees-in-employee-database;validate-a-new-user-is-created-with-basic-api-call",
+        "after": [
+          {
+            "result": {
+              "duration": 38000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "output": [
+              "2021-04-26 12:00:50 PASS: Request header Content-Type"
+            ],
+            "result": {
+              "duration": 61659600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Request header \"Content-Type\" is set as \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Content-Type\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 40
+                }
+              ],
+              "location": "API_STEPS.request_header_is_set_as(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "output": [
+              "2021-04-26 12:00:50 PASS: {id\u003d987, firstName\u003dAndrea, lastName\u003dEspinosa, role\u003dsdet, department\u003dHR} New user was created"
+            ],
+            "result": {
+              "duration": 367390800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I set request body with following parameters",
+            "match": {
+              "location": "API_STEPS.iSetRequestBodyWithFollowingParameters(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "987"
+                ]
+              },
+              {
+                "cells": [
+                  "firstName",
+                  "Andrea"
+                ]
+              },
+              {
+                "cells": [
+                  "lastName",
+                  "Espinosa"
+                ]
+              },
+              {
+                "cells": [
+                  "role",
+                  "sdet"
+                ]
+              },
+              {
+                "cells": [
+                  "department",
+                  "HR"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "2021-04-26 12:00:52 PASS: Send POST Request to: /api/employees"
+            ],
+            "result": {
+              "duration": 1326699600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I send POST Request to the resource \"/api/employees\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/api/employees\"",
+                  "offset": 36
+                }
+              ],
+              "location": "API_STEPS.iSendPOSTRequestToTheResource(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "2021-04-26 12:00:52 PASS: Expected code 200 Actual code 200"
+            ],
+            "result": {
+              "duration": 3185100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Response has status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 25
+                }
+              ],
+              "location": "API_STEPS.responseHasStatusCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@POST"
+          }
+        ]
+      }
+    ],
+    "name": "Create new Employees in Employee Database",
+    "description": "",
+    "id": "create-new-employees-in-employee-database",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/API_features/CreateNewEmployees.feature",
+    "tags": []
+  }
+]
