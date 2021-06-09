@@ -10,8 +10,8 @@ public class LoginSteps {
 
     @Given("I navigate to Employee Management")
     public void i_navigate_to_Employee_Management() {
-        LoginImpl loginimpl = new LoginImpl();
-        loginimpl.navigateToPage();
+        LoginImpl loginimpl = new LoginImpl(); //CREATE LOGINiMPL CLASS
+        loginimpl.navigateToPage(); //navigateToPAge is the name of the method, you create this name
     }
 
     @Then("I should see Login page")
@@ -57,6 +57,5 @@ public class LoginSteps {
         LoginImpl loginimpl = new LoginImpl();
         loginimpl.validateSigninBtnWithOneInput(btn,value,input);
     }
-
 
 }

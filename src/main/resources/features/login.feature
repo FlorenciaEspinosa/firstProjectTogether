@@ -10,8 +10,8 @@
          Then  I enter "user" in the "Username" input field
          Then  I enter "user123" in the "Password" input field
          Then  I click "Sign in" button
-         And   I should see "Welcome " page
-        #hi try
+         And   I should see "Welcome " page M
+        #AFTER YOU WRITE EACH SCENARIO -> DOUBLE CLICK -> CLICK ON THE LIGHT -> CREATE STEP DEFINITION (PREV CREATE LOGINGSTEPS IN STEPS CLASS)
 
 #     Validate the admin can Login with a valid credentials (Positive scenario)
       @Positive2

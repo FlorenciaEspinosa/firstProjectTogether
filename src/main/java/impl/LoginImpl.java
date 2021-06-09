@@ -14,9 +14,9 @@ import utils.WebdriverUtils;
 
 public class LoginImpl {
 
-    private static WebDriver driver;
+    private static WebDriver driver; //copy this
 
-    LoginPage loginPage = new LoginPage();
+    LoginPage loginPage = new LoginPage(); //CREATE LOGINPAGE INSIDE PAGES
 
     public void navigateToPage() {
         String url = ConfigReader.getProperty("url");
@@ -35,7 +35,7 @@ public class LoginImpl {
 
 
     public void enterUsername(String name, String input) {
-        String Xpath = String.format(CommonPage.XPATH_TEMPLATE_INPUTFIELD, input);
+        String Xpath = String.format(CommonPage.XPATH_TEMPLATE_INPUTFIELD, input); //FIND THE ELEMENT
         WebElement inputField = WebdriverUtils.getDriver().findElement(By.xpath(Xpath));
         inputField.sendKeys(name);
         CucumberScreenShot.logPass(name + " was entered in " + input + " input field successfully", true);
@@ -43,7 +43,7 @@ public class LoginImpl {
     }
 
     public void clickSignInBtn(String signInBtn) {
-        String Xpath = String.format(CommonPage.XPATH_TEMPLATE_BUTTON, signInBtn);
+        String Xpath = String.format(CommonPage.XPATH_TEMPLATE_BUTTON, signInBtn); //FIND THE ELEMENT
         WebElement signinBtn = WebdriverUtils.getDriver().findElement(By.xpath(Xpath));
         signinBtn.click();
 
